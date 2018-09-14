@@ -1,0 +1,21 @@
+<h3>{{ titulo }}</h3>
+
+<strong>Empleado estrella:</strong>
+<br/>
+<br/>
+<div *ngIf="trabajador_externo == true">
+    <button (click)="cambiarExterno(false)">Mostrar trabjador</button>
+    <ul *ngIf="trabajador_externo == true">
+        <li>{{ trabajadores[2].nombre}}</li>
+        <li>{{ trabajadores[2].edad}}</li>
+        <li>{{ trabajadores[2].cargo}}</li>
+    </ul>
+</div>
+<div *ngIf="trabajador_externo == false">
+    <button (click)="cambiarExterno(true)">Mostrar empleado</button>
+    <ul>
+        <li>{{ empleado.nombre}}</li>
+        <li>{{ empleado.edad}}</li>
+        <li>{{ empleado.cargo}}</li>
+    </ul>
+</div>
